@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <table width="100%" border="1" cellpadding="0" style="border-color: #000000;">
+        <tbody>
+            <tr>
+                <td bgcolor="#FF8566" valign="top" style="color: #FFFFFF;">
+                    <div style="text-align: right;"><h3><a href="/contacto" style="color: #FFFF00;">Agregar Comentario</a></h3></div>
+                    <div style="text-align: center;"><h3 style="color: #ffe100;">Comentarios registrados</h3></div>
+                    <table width="100%" border="1" cellpadding="0" style="border-color: #000000;">
+                        <thead>
+                            <tr>
+                                <td bgcolor="#FFD966" style="color: #003366;">Correo</td>
+                                <td bgcolor="#FFD966" style="color: #003366;">Descripción</td>
+                                <td bgcolor="#668cff"></td>
+                                <td bgcolor="#668cff"></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for i in comentarios %}
+                            <tr>
+                                <td width="42%" style="background-color: #ffe100; color: #003366;">{{i.1}}</td>
+                                <td width="42%" style="background-color: #ff0101; color: #003366;">{{i.2}}</td>
+                                <td bgcolor="#FF4D4D" width="8%"><center><a href="/editar/{{i.0}}" style="color: #FFFFFF;">Editar</a></center></td>
+                                <td bgcolor="#FFA366" width="8%"><center><a href="/borrar/{{i.0}}" style="color: #FFFFFF;">Borrar</a></center></td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<form action="/editar_comenta/{{comentar.0}}" method="post" style="background-color: white;" id="formulario">
+   <div class="container">
+          <div class="form-row">
+               <div class="col-xs-12 ">
+                <div class="mb-3">
+                      <center><label for="correo" class="form-label">Escribe aqui tu correo electronico</label><p></center>
+                      <center><input type="text" class="form-control" name="correo" id="correo" placeholder="nombre@ejemplo.com" value="{{comentar.1}}"><p></center>
+                </div>
+                <div class="mb-3">
+                      <center><label for="comentarios" class="form-label">Escribe tu mensaje</label></center><p>
+                      <center><input type="text" class="form-control" name="comentarios" id="comentarios" value="{{comentar.2}}"></input></center>
+                </div>
+                </div>
+          </div>
+    </div>
+          <p><center><button type="submit" class="btn btn-primary">Actualizar</button></center>
+</form>
+<style>
+      #formulario{
+            margin-left: 30%;
+            margin-right: 30%;
+            border-radius: 15px;
+      }
+      </style>
+
+{% endblock %}

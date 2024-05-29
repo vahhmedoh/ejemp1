@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<form action="/agrega_comenta" method="post" style="background-color: white;" id="formulario"><p><p></p><p><p></p>
+<div class="container">
+    <div class="form-row">
+         <div class="col-xs-12 ">
+          <div class="mb-3">
+                <center><label for="correo" class="form-label">Escribe aqui tu correo electronico</label><p></p></center>
+                <center><input type="email" class="form-control" name="correo" id="correo" placeholder="nombre@ejemplo.com"></center>
+          </div>
+          <div class="mb-3">
+            <center><p><p><label for="comentarios" class="form-label">Escribe tu mensaje</label><p></center>
+                  <center><input type="text" class="form-control" name="comentarios" id="comentarios"></input></center>
+          </div>
+          </div>
+    </div>
+</div>
+    <p><p><center><button type="submit" class="btn btn-primary">Enviar</button></center><p><p><p><p><p><p></p><p><p><p><p><p><p></p>
+</form>
+<style>
+      #formulario{
+            margin-left: 30%;
+            margin-right: 30%;
+            border-radius: 15px;
+      }
+      </style>
+
+{% endblock %}
